@@ -1,0 +1,13 @@
+    // Change font color to red
+    document.querySelector('#red').onclick = function() {
+        document.querySelector('#hello').style.color = 'red'; 
+    }
+            <button data-color="red">Red</button>
+<button data-color="blue">Blue</button>
+<button data-color="green">Green</button>
+
+        document.querySelectorAll('button').forEach(button => {
+            button.onclick = () => {
+                document.querySelector('#hello').style.color = button.dataset.color;
+            }
+        });
